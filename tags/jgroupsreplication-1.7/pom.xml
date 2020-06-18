@@ -138,6 +138,26 @@
                     </systemProperties>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0</version>
+
+                <configuration>
+                    <doclint>none</doclint>
+                    <author>true</author>
+                    <bottom>true</bottom>
+                    <!--<destDir>${project.build.directory}/site/javadoc</destDir>-->
+                    <header><![CDATA[<a href="/" target="_top">ehcache</a>]]></header>
+                    <minmemory>128m</minmemory>
+                    <maxmemory>512</maxmemory>
+                    <overview>${basedir}/src/main/java/net/sf/ehcache/overview.html</overview>
+                    <use>true</use>
+                    <version>true</version>
+                    <windowtitle>${project.name} ${project.version} API</windowtitle>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -163,4 +183,3 @@
     </repositories>
 
 </project>
-
