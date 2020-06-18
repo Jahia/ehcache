@@ -164,7 +164,7 @@ public class MemoryStore implements Store {
      *
      * @param element the element to add
      */
-    public synchronized final void put(final Element element) throws CacheException {
+    public final void put(final Element element) throws CacheException {
         if (element != null) {
             map.put(element.getObjectKey(), element);
             doPut(element);
